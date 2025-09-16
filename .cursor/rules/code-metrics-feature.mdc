@@ -1,0 +1,16 @@
+# Code Metrics Feature Implementation Rules
+
+## Rule 1: Modular Architecture
+All code metrics functionality should be implemented in a separate module with clear interfaces to maintain separation of concerns.
+
+## Rule 2: Performance First
+Metrics calculations should be optimized for performance, using asynchronous processing where appropriate and avoiding blocking operations.
+
+## Rule 3: Consistent Error Handling
+All error cases must be properly handled with descriptive error messages and appropriate fallback behavior.
+
+## Rule 4: Type Safety
+Use TypeScript interfaces and Zod schemas for all data structures to ensure type safety throughout the application.
+
+## Rule 5: Documentation
+All new functions must include JSDoc comments explaining their purpose, parameters, and return values.

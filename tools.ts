@@ -3,6 +3,7 @@ import { simpleGit } from "simple-git";
 import { z } from "zod";
 import fs from "fs/promises";
 import path from "path";
+import { calculateCodeMetrics, codeMetricsSchema } from "./metrics";
 
 const excludeFiles = ["dist", "bun.lock"];
 
@@ -77,4 +78,10 @@ export const writeReviewToMarkdownTool = tool({
   description: "Writes the code review to a markdown file",
   inputSchema: writeReviewToMarkdownSchema,
   execute: writeReviewToMarkdown,
+});
+
+export const calculateCodeMetricsTool = tool({
+  description: "Calculates code metrics for changes in a directory",
+  inputSchema: codeMetricsSchema,
+  execute: calculateCodeMetrics,
 });
